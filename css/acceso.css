@@ -1,0 +1,128 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 40px;
+}
+
+main {
+   border: 1px solid;
+   padding: 60px;
+   display: grid;
+   place-items: center;
+   box-shadow: -3px 4px 24px 0px rgba(0, 0, 0, 0.75);
+   -webkit-box-shadow: -3px 4px 24px 0px rgba(0, 0, 0, 0.75);
+   -moz-box-shadow: -3px 4px 24px 0px rgba(0, 0, 0, 0.75);
+}
+
+h1 {
+   margin-bottom: 15px;
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-right: 10px;
+}
+
+form .control {
+   display: flex;
+   width: 250px;
+   line-height: 1.9;
+   font-size: 14px;
+   border: solid 0.5px gainsboro;
+   outline: none;
+   border-radius: 2%;
+   box-shadow: none;
+   text-indent: 2px;
+   margin-bottom: 10px;
+}
+
+
+
+form .control:focus {
+   outline: none;
+   border: solid 1.5px;
+   outline-color: rgb(3, 3, 105);
+   box-shadow: 0px 1px 9px 1px rgba(0, 0, 0, 0.5);
+   border-color: #196ac0;
+}
+
+form .button {
+   padding: 10px 15px;
+   background-color: #196BCA;
+   color: #fff;
+   font-size: 15px;
+   border: 0px solid #000;
+   border-radius: 12px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 0px 1px 9px 1px rgba(0, 0, 0, 0.3);
+   transition: background 0.9s;
+}
+
+form .button:active {
+   background-color: #030566;
+}
+
+form .button:hover {
+   cursor: pointer;
+}
+
+main hr {
+   margin-top: 10px;
+   background: #000;
+   height: 3px;
+   width: 100%;
+   box-shadow: 0px 1px 9px 1px rgba(0, 0, 0, 0.3);
+}
+
+main .mensaje {
+   font-size: 10px;
+   margin-top: 10px;
+}
+
+main .alert {
+   color: crimson;
+   font-size: 12px;
+   display: none;
+}
+
+main .login {
+   margin-top: 50px;
+   margin-right: 250px;
+   text-decoration: none;
+   font-weight: bold;
+   color: #050888;
+}
+
+main .login:hover {
+   color: #196BCA;
+}
+
+@media only screen and (max-width: 568px) {
+   main {
+      width: 350px;
+      padding: 20px;
+   }
+
+   form .control {
+      width: 310px;
+   }
+
+   .button {
+      margin-left: 100px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+   }
+}

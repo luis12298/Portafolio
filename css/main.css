@@ -1,0 +1,535 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   min-height: 100vh;
+   color: white;
+   background-size: cover;
+   background-position: center;
+}
+
+.btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-width: 40px;
+   height: 40px;
+   background: none;
+   border-radius: 999px;
+   border: none;
+   cursor: pointer;
+   user-select: none;
+   padding: 0;
+   margin: 0 2px;
+   outline: none;
+   background-color: #1E88E5;
+}
+
+.btn:hover {
+   background-color: #dce2e714;
+}
+
+
+
+.btn-icon-alt {
+   opacity: 0.54;
+}
+
+/* Estilos generales para el navbar */
+.navbar {
+   position: fixed;
+   margin-top: -5px;
+   width: 100%;
+   background: rgb(9, 9, 121);
+   background: linear-gradient(90deg, rgba(9, 9, 121, 1) 13%, rgba(21, 7, 249, 1) 100%, rgba(0, 212, 255, 1) 100%);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   z-index: 12;
+}
+
+.navbar #home {
+   padding-left: 10px;
+   text-decoration: none;
+}
+
+#home:hover,
+#home:hover+.fa-house {
+   color: #222425;
+   font-weight: bold;
+}
+
+.fa-house {
+   padding-right: 30px;
+   margin-left: -10px;
+   color: #ffffff;
+}
+
+
+/* Estilo para el botón de sidebar */
+.btn {
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+}
+
+.btn img {
+   width: 24px;
+   height: 24px;
+   filter: brightness(2);
+
+}
+
+/* Estilo para los ítems del navbar */
+.nav-item {
+   color: #ffffff;
+   text-decoration: none;
+   padding: 10px 15px;
+}
+
+/* Estilo para el ítem de perfil */
+.perfil {
+   background: #ffffff;
+   position: relative;
+   border-radius: 190px 190px 190px 190px;
+   width: 32px;
+   height: 32px;
+   cursor: pointer;
+}
+
+/* Estilo para el menú desplegable de perfil */
+.perfil-menu {
+   display: none;
+   position: absolute;
+   width: 250px;
+   top: 50px;
+   left: -220px;
+   background-color: #ffffff;
+   border: 6px solid #f0eded;
+   border-radius: 20px;
+   padding: 5px;
+}
+
+.perfil img {
+   position: absolute;
+   top: 1px;
+   transform: translate(-47%);
+   border-radius: 50%;
+}
+
+.perfil-menu li {
+   margin: 5px;
+   list-style: none;
+
+}
+
+.perfil-menu div {
+   border-radius: 7px;
+}
+
+.perfil-menu div:hover {
+
+   background-color: aquamarine;
+   transition: 0.7s;
+}
+
+.perfil-menu li a {
+   color: #0e0e0e;
+   text-decoration: none;
+}
+
+/* Mostrar el menú desplegable cuando se pasa el mouse sobre el ítem de perfil */
+
+.perfil-menu div {
+   margin: 6px;
+   padding: 2px;
+}
+
+
+.perfil-menu .out {
+   margin-top: 5px;
+}
+
+.navbar-right {
+   display: flex;
+   align-items: center;
+}
+
+.infor {
+   display: none;
+   position: relative;
+   background: #e8edf0;
+   color: #0e0e0e;
+   padding: 10px;
+   border-radius: 10px;
+   top: 60px;
+   margin-left: -220px;
+}
+
+
+.perfil:hover .infor {
+   z-index: -1;
+   display: block;
+}
+
+i {
+   padding-left: 2px;
+   color: #0e0e0e;
+}
+
+.sidebar {
+   background: rgb(12, 12, 82);
+   background: linear-gradient(90deg, rgba(12, 12, 82, 1) 100%, rgba(0, 212, 255, 1) 100%);
+   backdrop-filter: blur(15px);
+   width: 250px;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: -250px;
+   overflow-y: auto;
+   transition: 0.6s ease;
+   transition-property: left;
+   z-index: 11;
+}
+
+.sidebar.active {
+   left: 0;
+}
+
+.sidebar .menu {
+   width: 100%;
+   margin-top: 60px;
+}
+
+.sidebar .menu .item {
+   position: relative;
+   cursor: pointer;
+}
+
+.sidebar .menu .item a i {
+   color: #ffffff;
+}
+
+.sidebar .menu .item a {
+   color: #fff;
+   font-size: 14px;
+   text-decoration: none;
+   display: block;
+   padding: 2px 30px;
+   line-height: 40px;
+}
+
+.sidebar .menu .item a .dropdown {
+   position: absolute;
+   right: 0;
+   margin: 10px;
+   transition: 0.3s ease;
+}
+
+.sidebar .menu .item .sub-menu {
+   background: rgb(12, 12, 82);
+   display: none;
+}
+
+.sidebar .menu .item .sub-menu a {
+   padding-left: 80px;
+}
+
+.sidebar .menu .item a:hover {
+   background: #125ab8;
+   transition: 0.3s ease;
+}
+
+.sidebar .menu .item i {
+   margin-right: 15px;
+}
+
+.sidebar .menu .item a .dropdown {
+   position: absolute;
+   right: 0;
+   margin: 20px;
+   transition: 0.3s ease;
+}
+
+.sidebar .menu .item .sub-menu {
+   background: rgb(12, 12, 82);
+   display: none;
+}
+
+.sidebar .menu .item .sub-menu a {
+   padding-left: 60px;
+}
+
+.rotate {
+   transform: rotate(90deg);
+}
+
+main {
+   padding-top: 70px;
+   margin: 5px;
+   z-index: 9;
+}
+
+#contenidoIframe {
+   margin-top: -20px;
+}
+
+.sidebar-oculto main {
+   margin-left: 0;
+   /* Ajustar el margen izquierdo cuando el sidebar esté oculto */
+}
+
+/* css de las cuentas */
+
+h1 {
+   color: #000;
+   text-align: center;
+}
+
+hr {
+   width: 100%;
+   background-color: black;
+   height: 2px;
+   border: none;
+   margin: 10px 0;
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+   color: #000;
+   margin-bottom: 10px;
+}
+
+.form-container {
+   position: relative;
+   padding: 15px;
+   padding: 4rem 3rem;
+   border: solid 2px black;
+   margin-bottom: 10px;
+}
+
+.form__div {
+   position: relative;
+   display: inline-block;
+
+   padding-right: 250px;
+}
+
+.control {
+   position: absolute;
+   top: 0;
+   left: 0;
+   margin-bottom: 10px;
+   padding: 1rem;
+   border: 1px solid #ccc;
+   border-radius: .5rem;
+   outline: none;
+   background: none;
+   width: 200px;
+}
+
+#txtCorreo {
+   width: 250px !important;
+}
+
+
+.control-label {
+   position: absolute;
+   left: 1rem;
+   top: 1rem;
+   padding: 0 .25rem;
+   background-color: #fff;
+   color: #80868B;
+   font-size: 1rem;
+   transition: .3s;
+   z-index: -1;
+}
+
+.control:focus {
+   border: 1.5px solid #4285f4;
+}
+
+.control:focus+.control-label {
+   top: -.5rem;
+   left: .8rem;
+   color: #1A73E8;
+   font-size: 1rem;
+   font-weight: 500;
+   z-index: 10;
+}
+
+.control:not(:placeholder-shown).control:not(:focus)+.control-label {
+   top: -.5rem;
+   left: .8rem;
+   font-size: 1rem;
+   font-weight: 500;
+   z-index: 10;
+}
+
+.btn-save {
+   position: absolute;
+   top: 0;
+   left: -40px;
+   padding: 1rem;
+   background: linear-gradient(to right, #196BCA, #6433E0);
+   background-color: #196BCA;
+   color: #fff;
+   font-size: 16px;
+   border: 0px solid #000;
+   border-radius: 16px;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 0px 1px 9px 1px rgba(0, 0, 0, 0.5);
+}
+
+.btn-save:hover {
+   background: linear-gradient(to right, #5482d0, #7d5ee3);
+   background-color: #5482d0;
+}
+
+.btn-save:active {
+   transform: scale(0.95);
+}
+
+
+
+button.btn-delete:hover {
+   background-color: #b30000;
+}
+
+
+
+button.btn-edit:active,
+button.btn-delete:active {
+   background-color: #0056b3;
+   transform: translateY(1px);
+}
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+}
+
+table th {
+   background-color: #0c1cb3;
+   color: #f7f7f7;
+   font-weight: bold;
+}
+
+table tr:nth-child(even) {
+   background-color: #e8f1fd;
+}
+
+table tr:hover {
+   background-color: #d4e9fc;
+}
+
+table th,
+table td {
+   padding: 3px;
+   border: 1px solid black;
+}
+
+table th:nth-child(1) {
+   width: 1%;
+}
+
+table th:nth-child(5),
+table td:nth-child(5) {
+   text-align: center;
+   width: 1%;
+   white-space: nowrap;
+}
+
+table tbody {
+   color: #000;
+}
+
+table button {
+   display: inline-block;
+   margin: 0 1px;
+}
+
+
+button {
+   padding: 5px 10px;
+   margin-right: 5px;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+}
+
+.btn-edit {
+   background-color: #007bff;
+   color: #fff;
+}
+
+.btn-delete {
+   background-color: #dc3545;
+   color: #fff;
+}
+
+button.btn-edit:hover {
+   background-color: #0056b3;
+}
+
+button.btn-delete:hover {
+   background-color: #b30000;
+}
+
+
+
+button.btn-edit:active,
+button.btn-delete:active {
+   background-color: #0056b3;
+   transform: translateY(1px);
+}
+
+@media only screen and (max-width: 720px) {
+   .form__div {
+      position: relative;
+      height: 48px;
+      margin-bottom: 1.5rem;
+   }
+
+   .btn-save {
+      left: 0;
+   }
+}
+
+@media only screen and (max-width: 580px) {
+   .navbar {
+      position: relative;
+   }
+
+   .form__div {
+      position: relative;
+      height: 48px;
+      margin-bottom: 1.5rem;
+   }
+
+   .btn-save {
+      left: 0;
+   }
+
+   table {
+      font-size: 10px;
+      margin-left: -3px;
+   }
+}
+
+.edit-input {
+   outline: none;
+   border: none;
+   background: white;
+   font-size: inherit;
+   width: 80%;
+   padding: 3px;
+   margin: 0;
+   cursor: text;
+}

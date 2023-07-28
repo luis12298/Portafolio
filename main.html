@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Main</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="shortcut icon" href="images/checkmark-user-icon-png.png" type="image/x-icon">
+</head>
+
+<body>
+   <nav class="navbar">
+      <div class="navbar-left">
+         <button id="header-menu" class="btn header-menu tooltip" data-info="Main menu">
+            <img src="images/menu_black_24dp.svg" alt="Main menu" class="btn-icon btn-icon-alt">
+         </button>
+      </div>
+      <div class="navbar-right">
+         <a href="#" id="home" class="nav-item">Inicio</a><i class="fa-solid fa-house"></i>
+         <div class="nav-item perfil">
+            <img id="foto-perfil" width="30" height="30"
+               src="https://img.icons8.com/pastel-glyph/64/user-male-circle.png" alt="user-male-circle" />
+            <div class="infor"> </div>
+            <ul class="perfil-menu">
+
+               <div class="title">
+                  <li><a href="#"><span id="correo">Perfil:</span> </a><i class="fa-solid fa-id-card"></i></li>
+               </div>
+               <div class="setting">
+                  <li><a href="#">Configuración </a><i class="fa-solid fa-gear"></i></li>
+               </div>
+               <hr class="line">
+               <div class="out">
+                  <li><a id="Cerrar">Cerrar sesión </a><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  </li>
+               </div>
+
+            </ul>
+         </div>
+      </div>
+   </nav>
+   <section class="sidebar">
+      <div class="menu">
+         <div class="item"><a href="#"><i class="fas fa-desktop"></i>Dashboard</a></div>
+         <div class="item">
+            <a class="sub-btn"><i class="fas fa-table"></i>Acciones<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="sub-menu">
+               <a href="#" id="btnRegistrar" class=" sub-item">Registrar</a>
+               <a href="#" id="btnRecuperar" class=" sub-item">Recuperar</a>
+            </div>
+         </div>
+         <div class="item"><a href="#"><i class="fa-regular fa-clipboard"></i>Apuntes</a></div>
+      </div>
+   </section>
+   <main class="container">
+      <h1>Cuentas Asociadas</h1>
+      <!-- <input type="button" id="Cerrar" value="Cerrar Sesion"> -->
+      <span style="display: none;" id="Mensaje">Sesion Cerrada</span>
+      <div class="form-container">
+         <h2>Agregar Nuevo</h2>
+         <div class="form__div">
+            <input id="txtCorreo" class="control" type="text" placeholder="">
+            <label class="control-label" for="txtCorreo">Correo</label>
+         </div>
+         <div class="form__div">
+            <input id="txtPass" class="control" type="text" placeholder="">
+            <label class="control-label" for="txtPass">Contraseña</label>
+         </div>
+         <div class="form__div">
+            <input id="txtDes" class="control" type="text" placeholder="">
+            <label class="control-label" for="txtPass">Descripción</label>
+
+         </div>
+
+         <div class="form__div">
+            <button class="btn-save"><span class="fa fa-save" style="padding-right: 5px;"></span>Guardar</button>
+         </div>
+
+      </div>
+      <hr>
+      <h2>Registros</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>ID</th>
+               <th>Correo/Usuario</th>
+               <th>Contraseña</th>
+               <th>Descripcion</th>
+               <th>Acciones</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>1</td>
+               <td>Producto 1</td>
+               <td>Descripción 1</td>
+               <td>Descripción 2</td>
+               <td>
+                  <button class="btn-edit"><span class="fa fa-edit" style="padding-right: 5px;"></span>Editar</button>
+                  <button class="btn-delete"><span class="fa fa-trash"
+                        style="padding-right: 5px;"></span>Eliminar</button>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div id="tempContainer" style="display: none;"></div>
+   </main>
+
+   <script type="module" src="js/cerrar.js"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.1.0/firebase-app-compat.min.js"
+      integrity="sha512-KqbXvAE42TIElmb5NkCHsBkwTjV8ZjNv+5ye07cWKZx/TFtZ7IfZqodWrg1E5gsTdJu0u/ay2EwV/T22RK8N+w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.1.0/firebase-database-compat.min.js"
+      integrity="sha512-lQKXeqgg70WVsob+XVmVXMzDlgx8U4Uq8eq3bfDY2GiZZf1qJ91l9UXVy/7ZTteZ7iIuRHGqky74ZVzZMp2tZQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script src="js/includes.js"></script>
+   <script src="js/script.js"></script>
+   <script src="js/crud.js"></script>
+
+</body>
+
+</html>

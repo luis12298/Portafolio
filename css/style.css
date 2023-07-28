@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+* {
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   font-family: arial;
+}
+
+body {
+   background-image: radial-gradient(#110a89 6px, transparent 6px), radial-gradient(#110a89 6px, transparent 6px);
+   background-size: 13px 13px;
+   background-position: 0 0, 6.5px 6.5px;
+   background-color: #47d3ff;
+}
+
+h1 {
+   text-align: center;
+}
+
+img {
+   margin-left: 40%;
+}
+
+h2 {
+   font-size: 11px;
+   text-indent: 5px;
+}
+
+.login-form {
+   background-color: #eee;
+   width: 500px;
+   padding: 40px 60px;
+   /*arriba izquierda*/
+   border-radius: 5px;
+   position: absolute;
+   margin: auto;
+   top: 2.4rem;
+   left: 0;
+   right: 0;
+
+   box-shadow: -3px 4px 24px 0px rgba(0, 0, 0, 0.75);
+   -webkit-box-shadow: -3px 4px 24px 0px rgba(0, 0, 0, 0.75);
+   -moz-box-shadow: -3px 4px 24px 0px rgba(0, 0, 0, 0.75);
+}
+
+.form-group {
+   position: relative;
+   margin-bottom: 15px;
+
+}
+
+.form-group label {
+   margin-left: 3%;
+   font-size: 14px;
+   font-weight: bold;
+
+}
+
+.form-group i {
+   position: absolute;
+   left: 5%;
+   top: 70%;
+   transform: translateY(-50%);
+   pointer-events: none;
+   font-size: 14px;
+}
+
+.form-control {
+   width: 350px;
+   height: 40px;
+   font-size: 14px;
+   margin-left: 3%;
+   margin-top: 5px;
+   /* margin: 2px; */
+   border: none;
+   outline: none;
+   padding: 8px;
+   border-radius: 5px;
+   border: 1px solid gray;
+   text-indent: 15px;
+}
+
+.log-btn {
+   background: #110a89;
+   cursor: pointer;
+   width: 350px;
+   font-size: 16px;
+   height: 50px;
+   color: #fff;
+   border-radius: 5px;
+   border: none;
+   margin-left: 3%;
+   transition: background 0.2s;
+}
+
+.log-btn:hover {
+   background: #0c17a8;
+}
+
+.log-btn:active {
+   background: #250750;
+}
+
+.alert {
+   display: block;
+   font-size: 12px;
+   color: #f00;
+   float: left;
+   margin-bottom: 10px;
+   margin-left: 3%;
+}
+
+.alert2 {
+   display: block;
+   font-size: 12px;
+   color: #2f0688;
+   float: left;
+   margin-bottom: 10px;
+   margin-left: 3%;
+   padding-right: 5px;
+}
+
+.check {
+   display: none;
+   font-weight: bold;
+   color: #2f0688;
+   font-size: 14px;
+}
+
+.ocultar {
+   display: none;
+   position: absolute;
+   right: 8%;
+   top: 70%;
+   transform: translateY(-50%);
+
+   font-size: 14px;
+   cursor: pointer;
+   /* pointer-events: none; */
+}
+
+.link-registro {
+   margin-left: -30px;
+   display: flex;
+   align-items: center;
+}
+
+.btn-google {
+
+   margin-top: 10px;
+   background: #ffffff;
+   cursor: pointer;
+   width: 350px;
+   font-size: 16px;
+   height: 50px;
+   color: #2000d8;
+   border-radius: 5px;
+   border: none;
+   margin-left: 10px;
+   text-align: left;
+   justify-content: center;
+
+   /* Ajusta el valor según el espacio deseado entre el icono y el botón */
+   transition: background 0.2s;
+}
+
+.btn-google:hover {
+   background: #e9e6e6;
+}
+
+.btn-registrar:hover {
+   background: #e9e6e6;
+}
+
+.google-img {
+   position: absolute;
+   left: 200px;
+   /* Ajusta el valor para posicionar la imagen a la izquierda */
+   top: 88%;
+   transform: translateY(-50%);
+}
+
+.btn-registrar {
+   text-decoration: none;
+   display: grid;
+   place-items: center;
+   margin-top: 10px;
+   background: #ffffff;
+   cursor: pointer;
+   width: 350px;
+   font-size: 16px;
+   height: 50px;
+   color: #2000d8;
+   border-radius: 5px;
+   border: none;
+   margin-left: 10px;
+   /* Ajusta el valor según el espacio deseado entre el icono y el botón */
+   transition: background 0.2s;
+
+}
+
+.forgot {
+   position: relative;
+   text-decoration: none;
+   left: 200px;
+   top: 5px;
+   color: #410299;
+}
+
+.forgot:hover {
+   color: #2000d8;
+}
+
+@media only screen and (max-width: 568px) {
+
+   .login-form {
+      max-width: 350px;
+      margin-left: 2%;
+      margin: 0 auto;
+
+   }
+
+   img {
+      margin-left: 25%;
+   }
+
+   .form-control {
+      width: 250px;
+      margin-left: 0.3%;
+      text-indent: 20px;
+      margin: 0 auto;
+   }
+
+   .ocultar {
+      right: 0;
+   }
+
+   .log-btn {
+      margin-left: 0.3%;
+      width: 250px;
+      margin: 0 auto;
+   }
+
+   .btn-google {
+      padding: 0px 30px 5px 10px;
+      text-align: center;
+      left: 0px;
+   }
+
+   .link-registro {
+      margin-left: -25px;
+   }
+
+   .forgot {
+      position: relative;
+      left: 100px;
+      top: 5px;
+
+   }
+}
