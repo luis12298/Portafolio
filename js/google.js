@@ -23,7 +23,7 @@ btnGoogle.addEventListener("click", async () => {
    try {
       const credenciales = await signInWithPopup(auth, provider);
       console.log(credenciales);
-      alert("Correcto");
+      // alert("Correcto");
       window.location = "main.html";
    } catch (error) {
       console.log(error);
